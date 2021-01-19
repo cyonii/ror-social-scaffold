@@ -11,7 +11,7 @@ This project is a simple social platform where users can connect and share posts
 
 ## Live Demo
 
-TBA
+[Live demo](https://frozen-plateau-11747.herokuapp.com)
 
 
 ## Getting Started
