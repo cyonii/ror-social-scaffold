@@ -1,11 +1,13 @@
 # Scaffold for social media app with Ruby on Rails
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This project is a simple social platform where users can connect and share posts based on a friendship concept. Very similar to the Facebook concept of friendship, which means one user can send out an invitation to connect to another user, and it's up to the receiving user to accept or reject the friendship request. Friendship is symmetrical
 
 ## Built With
 
 - Ruby v2.7.0
 - Ruby on Rails v5.2.4
+- Devise
+- PostgreSQL
 
 ## Live Demo
 
@@ -15,6 +17,16 @@ TBA
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
+
+Open your terminal and run these commands
+- clone this repository by running `git clone git@github.com:cyonii/ror-social-scaffold.git`
+- run `cd ror-social-scaffold`
+- run `bundle install`
+- run `yarn install`
+- run `rails db:migrate`
+- you can optionally run `rails db:seed` to populate the database with fake data
+- run `rails server` to start the application
+- typically the live server will be started at `https://localhost:3000`
 
 ### Prerequisites
 
@@ -51,27 +63,22 @@ To make sure the linters' checks using Github Actions work properly, you should 
 
 Start server with:
 
-```
-    rails server
-```
+`rails server`
 
 Open `http://localhost:3000/` in your browser.
 
 ### Run tests
 
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+run `rspec` in the containing folder to run tests the application.
 
 ## Authors
 
-TBA
+👤 **CY Kalu**
+
+- GitHub: [@cyonii](https://github.com/cyonii)
+- Twitter: [@theOnuoha](https://twitter.com/theOnuoha)
+- LinkedIn: [Silas Kalu](https://www.linkedin.com/in/cyonii/)
+
 
 ## 🤝 Contributing
 
@@ -83,11 +90,7 @@ Feel free to check the [issues page](issues/).
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
-
-TBA
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.  
