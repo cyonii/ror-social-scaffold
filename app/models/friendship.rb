@@ -19,4 +19,14 @@ class Friendship < ApplicationRecord
   def rejected?
     status == 'rejected'
   end
+
+  after_update do |friendship|
+    reverse_friendship = Friendship.find_by(user: friendship.friend, friend: friendship.user)
+
+    if friendship.confirmed? and reverse_friendship.nil?
+      Friendship.create(user: friendship.friend, friend: friendship.user, status: 'confirmed')
+    elsif reverse_friendship
+      reverse_friendship.update(status: friendship.status) unless reverse_friendship.status == friendship.status
+    end
+  end
 end
